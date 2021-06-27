@@ -110,6 +110,22 @@
 
     </div>
   </nav>
+
+<div style="margin-top: 70px;" >
+
+  {% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}" role="alert">
+            {{ message }}
+        </div>
+    {% endfor %}
+  {% endif %}
+
+</div>
+
+
+
+
 {% block content  %}
 
 {% endblock content %}
